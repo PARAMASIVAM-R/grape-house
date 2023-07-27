@@ -1,0 +1,89 @@
+@font-face {
+    font-family:ds_digital-7 ;
+    src: url(/ds_digital/DS-DIGI.TTF);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(43, 35, 35);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 50px;
+    user-select: none;
+}
+.clock{
+    display: flex;
+    width: 800px;
+    height: 270px;
+    border-radius:9px;
+    box-shadow: 0px 0px 8px 4px rgb(245, 247, 246);
+
+    justify-content: center;
+    align-items: center;
+    font-family: ds_digital-7;
+    font-weight: 100px;
+    position: relative;
+    background-color: rgb(14, 13, 13);
+    text-shadow: 0px 0px 2px  rgb(255, 0, 0);
+    padding-right: 50px;
+    transition: 0.5s; 
+    cursor: pointer;
+}
+h2{
+    font-size: 80px;
+    font-family:  ds_digital-7;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.clock div{
+    width: 70px;
+    font-size: 80px;
+    color: #EB2F06;
+    transition: 0.5s;  
+}
+.dot,.txt{
+    padding: 20px;
+}
+.h::before,.m::before,.s::before{
+  content: '8';
+  position: absolute;
+  font-weight: 100;
+  opacity: 0.2;
+}
+.dot{
+    opacity: 0;
+    animation: blink 1s ease infinite;
+}
+@keyframes blink {
+    form{opacity: 0;}
+    to{opacity: 1;}
+}
+@media(max-width:992px){
+    .clock{
+        width: 400px;
+        height: 150px;
+        border-radius: 9px;
+        padding-left: 45px;
+        transition: 0.5s;
+    }
+    .clock div{
+        font-size: 35px;
+        transition: 0.5s;
+    }
+    .dot,.txt{
+        padding: 3px;
+    }
+    h2{
+        font-size: 40px;
+        transition: 0.5s;
+    }
+}

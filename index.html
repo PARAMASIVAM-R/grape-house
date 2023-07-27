@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="home">   
+        <nav id="menu" >
+            <h2 id="logo">Grape <span>House's</span></h2>
+            <ul>
+                <li><a href="#home   "> Home  </a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="search_bar">
+                <input type="text" class="text"  id="focus" placeholder="Search here...">
+                <label for="focus" class="button">search</label>
+            </div>
+            <div class="bar-box ">
+                <div class="bar bar1 "></div>
+                <div class="bar bar2 "></div>
+                <div class="bar bar3 "></div>
+            </div>
+        </nav>
+        <nav class="mobile-menu " >
+            <ul class="un-order">
+                <li><a href="#home   "> Home  </a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div class="comName">
+                <h2 class="name">Grape <span>House's</span> Software Fantasy</h2>
+                <p class="slogan">Perseverance is the key for success</p>
+            </div>
+            <form action="" class="form">
+                <h3>Login here</h3>
+                <div class="form-group">
+                    <label for="Usernome">Username</label>
+                    <input type="text" name="Usernome" id="Usernome" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <input type="submit" value="Login" class="login">
+                <div class="noacc">
+                    <p>Don't have an account?</p>
+                    <p> <span>Sign up</span> here</p>
+                    <h4>Log in with</h4>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="service">  
+        <div class="service-content">
+            <p>our services</p>
+            <h3>Custom IT Solutions for Your Succesful</h3>
+            <h3>Business</h3>
+        </div>
+        <div class="service-boxes">
+            <div class="service-box box-1">
+                <h3>mobile app development</h3>
+                <div class="service-img">
+                    <img src="/images/Android.png" alt="">
+                </div>
+                <p>we provide top mobile app development
+                    services to help businesses of all sizes reach
+                    their full potential.
+
+                </p>
+                <span>read more</span>
+            </div>
+            <div class="service-box box-2">
+                <h3>web design</h3>
+                <div class="service-img">
+                    <img src="/images/web.png" alt="">
+                </div>
+                <p>We provide UI Designing and Modern Template creation</p>
+                <span>read more</span>
+            </div>
+            <div class="service-box box-3">
+                <h3>desktop application</h3>
+                <div class="service-img">
+                    <img src="/images/des.png" alt="">
+                </div>
+                <p>We provide window based application to help business</p>
+                <span>read more</span>
+            </div>
+        </div>
+    </section>
+    <section id="project">
+       <div class="project_links">
+            <a href="/calcage/intex.html" target="frame"              >calculate Date   </a>
+            <a href="/seven-segment colock/index.html" target="frame" >real clock      </a>
+            <a href="/Stop Clock/index.html" target="frame"           >stop clock      </a>
+            <a href="/Time_Month_Days/index.html" target="frame"      >clock with month</a>
+            <a href="/StickyNotes/index.html" target="frame"          >sticky note     </a>
+       </div>
+       <div class="project_frame">
+            <iframe src="" name="frame" frameborder="0"></iframe>
+       </div>
+    </section>
+    <section id="contact">
+        <div class="contact-box">
+            <form action="" class="contact-form">
+                <h2>Send us a message</h2>
+                <div class="contact-group">
+                    <input type="text" name="name" id="name" placeholder="name" required>
+                </div>
+                <div class="contact-group">
+                    <input type="email" name="email" id="email" placeholder="email" required>
+                </div>
+                <div class="contact-group">
+                    <input type="text" name="subject" id="subject"placeholder="subject" required>
+                </div>
+                <div class="contact-group">
+                    <textarea name="" id="msg" cols="30" rows="10" placeholder="message" ></textarea>
+                </div>
+                <div class="contact-group">
+                  <button>Submit</button>
+                </div>
+            </form>
+            <div class="contact-details">
+                <h2>Contact us</h2>
+                <p>We're open for any suggestion or just to have chat.</p>
+                <div class="contact-detail address">
+                    <div class="img">
+                        <img src="/images/address.png" alt="">
+                    </div>
+                    <p><span>address:</span>119,Vayalampadi,Kallakurchi 606207</p>
+                </div>
+                <div class="contact-detail phone">
+                    <div class="img">
+                        <img src="/images/phone.png" alt="">
+                    </div>
+                    <p><span>phone:</span>+91 6379773448</p>
+                </div>
+                <div class="contact-detail email">
+                    <div class="img">
+                        <img src="/images/email.png" alt="">
+                    </div>
+                    <p><span>email:</span>grapehouse's@gmail.com</p>
+                </div><div class="contact-detail website">
+                    <div class="img">
+                        <img src="/images/website.png" alt="">
+                    </div>
+                    <p><span>website:</span>www.Grape House's.com</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+<script src="js/script.js"></script> 
+</body>
+</html>

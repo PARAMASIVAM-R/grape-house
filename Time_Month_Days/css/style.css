@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: digital-7;
+    src: url(/ds_digital/DS-DIGI.TTF);
+}
+:root{
+    --color_in_times:rgb(38, 218, 38);
+    --opcity_in_time:0.1;
+
+    --color_day_and_month:rgb(255, 255, 255);
+    --opcity_day_and_month_afterblink:0.3;
+
+    --color_in_date:red;
+    --opcity_in_date:0.2;  
+}
+body{
+    background:linear-gradient(to bottom left ,rgb(34, 47, 62),rgb(44, 58, 71), rgb(87, 101, 116));
+    background-repeat: no-repeat;
+    color:white;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.clock{
+    height: 250px;
+    width: 700px;
+    background-color: rgb(6, 7, 7);
+    box-shadow: 0px 0px 4px 5px rgb(252, 252, 252);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+.clock .days,.months,.times,.dates{
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+
+}
+.times{
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   font-size: 90px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-family:digital-7 ;
+   font-weight: 500;
+   color:var(--color_in_times);
+   /* margin-right: 20px; */
+   overflow: hidden;
+  
+}
+.dates{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:digital-7 ;
+    color: var(--color_in_date);
+}
+.month,.day{
+    color: var(--color_day_and_month);
+    font-size: 14px;
+    font-weight: 600;
+    opacity: var(--opcity_day_and_month);
+}
+.month,.day::first-letter{
+    text-transform: capitalize;
+}
+.time{
+    /* background-color: red; */
+    width: 40px;
+    text-shadow: 0px 0px  2px rgb(6, 255, 6);
+   position: relative;  /* is given for (after) element  */
+}
+.time::after{
+    content: '8';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: var(--color_in_times);
+    left: 0.0%;
+
+    opacity: var(--opcity_in_time);
+}
+.date{
+    position: relative;  /* is given for (after) element 88-88*/
+ }
+ .date::after{
+     content: '88';
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     color: var(--color_in_date);
+     left: 0%;
+    
+     opacity: var(--opcity_in_date);
+ }
+ .date-year{
+    position: relative;  /* is given for (after) element 8888 */
+ }
+ .date-year::after{
+    content:'8888';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: var(--color_in_date);
+    left: 0%;
+    opacity:var(--opcity_in_date) ;
+}
+/* ----------------AM PM---------- */
+.txt{
+    position: relative;
+}
+.text{
+    position: absolute;
+    font-size: 25px;
+    top:2px ;
+    opacity: 0;
+}
+.txt-2{
+    position: absolute;
+    top: 40px;
+}
+/* ----------------AM PM---------- */
+.dot,.hypn{   
+    animation: blink 1000ms ease infinite;   
+}
+@keyframes blink{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+/* weekdays and months selectiion */
+.day{  
+    --bright:var(--opcity_day_and_month_afterblink); 
+}
+.day-1 {opacity:var(--bright);}
+.day-2 {opacity:var(--bright);}
+.day-3 {opacity:var(--bright);}
+.day-4 {opacity:var(--bright);}
+.day-5 {opacity:var(--bright);}
+.day-6 {opacity:var(--bright);}
+.day-7 {opacity:var(--bright);}
+
+.month{
+    --brighten:var(--opcity_day_and_month_afterblink);
+}
+.month-0{opacity: var(--brighten);}
+.month-1{opacity: var(--brighten);}
+.month-2{opacity: var(--brighten);}
+.month-3{opacity: var(--brighten);}
+.month-4{opacity: var(--brighten);}
+.month-5{opacity: var(--brighten);}
+.month-6{opacity: var(--brighten);}
+.month-7{opacity: var(--brighten);}
+.month-8{opacity: var(--brighten);}
+.month-9{opacity: var(--brighten);}
+.month-10{opacity:var(--brighten);}
+.month-11{opacity:var(--brighten);}
+
+@media (max-width:992px) {
+    .clock{
+        height: 150px;
+        width: 380px;
+        justify-content: center;
+        gap: 10px;
+    }
+    .clock .days,.months,.times,.dates{
+        gap: 5px;
+    }
+    .times{
+        font-size: 50px;
+        gap: 5px;
+    }
+    .dates{
+        font-size: 30px;
+    }
+    .month,.day{
+        font-size: 10px;
+    }
+}
